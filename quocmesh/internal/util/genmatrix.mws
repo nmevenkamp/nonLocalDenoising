@@ -1,0 +1,82 @@
+{VERSION 5 0 "IBM INTEL LINUX" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Input" 2 19 "" 0 1 255 0 0 1 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+198 "f := array( 1..8, \n[\n(1-x)*(1-y)*(1-z), \nx*(1-y)*(1-z),\n(1-x)
+*y*(1-z),\nx*y*(1-z),\n(1-x)*(1-y)*z, \nx*(1-y)*z,\n(1-x)*y*z,\nx*y*z]
+ );\ng :=array( 1.. 8 );\nfor i from 1 to 8 do\n  g[i] := diff(f[i],x)
+:\nod;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"fG-%'vectorG6#7**(,&\"\"\"F+%\"xG!\"\"F+,&F+F+%\"yG
+F-F+,&F+F+%\"zGF-F+*(F,F+F.F+F0F+*(F*F+F/F+F0F+*(F,F+F/F+F0F+*(F*F+F.F
++F1F+*(F,F+F.F+F1F+*(F*F+F/F+F1F+*(F,F+F/F+F1F+" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"gG-%&arrayG6$;\"\"\"\"\")7\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%\"gG6#\"\"\",$*&,&F'F'%\"yG!\"\"F',&F'F'%\"zGF,F'F,
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"gG6#\"\"#*&,&\"\"\"F*%\"yG!\"
+\"F*,&F*F*%\"zGF,F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"gG6#\"\"$,
+$*&%\"yG\"\"\",&F+F+%\"zG!\"\"F+F." }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>&%\"gG6#\"\"%*&%\"yG\"\"\",&F*F*%\"zG!\"\"F*" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%\"gG6#\"\"&,$*&,&\"\"\"F+%\"yG!\"\"F+%\"zGF+F-" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"gG6#\"\"'*&,&\"\"\"F*%\"yG!\"\"F*
+%\"zGF*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"gG6#\"\"(,$*&%\"yG\"\"
+\"%\"zGF+!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"gG6#\"\")*&%\"y
+G\"\"\"%\"zGF*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "m := array( 1..8, 1..8 );" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG-%&arrayG6%;\"\"\"\"\")F(7\"" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "fac := array( 1..8, 1..8 )
+;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$facG-%&arrayG6%;\"\"\"\"\")F(7
+\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 86 "set_diag := proc( i, \+
+j, val ) \nglobal fac;\nfac[i,j] := val:\nfac[j,i] := val:\nend proc;
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%)set_diagGf*6%%\"iG%\"jG%$valG6
+\"F*F*C$>&%$facG6$9$9%9&>&F.6$F1F0F2F*6#F.F*" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 58 "c8 := [ [1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7
+],[8,8] ]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "c4 := [ [1,2]
+,[2,3],[1,4],[4,3],[5,6],[5,8],[7,6],[7,8],[2,6],[3,7],[4,8],[1,5] ]:
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "c2 := [ [1,3],[2,4],[5,
+7],[6,8],[2,7],[3,6],[1,8],[4,5],[3,8],[4,7],[1,6],[2,5] ]:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "c1 := [ [1,7],[2,8],[6,4],[3
+,5] ]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "for i from 1 to 8
+ do set_diag( c8[i][1], c8[i][2], 8 ) end do:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 63 "for i from 1 to 12 do set_diag( c4[i][1], c4[i][
+2], 4 ) end do:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "for i fr
+om 1 to 12 do set_diag( c2[i][1], c2[i][2], 2 ) end do:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "for i from 1 to 4 do set_diag( c1[i
+][1], c1[i][2], 1 ) end do:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 33 "this
+ code generates a mass matrix" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 122 "for i from 1 to 8 do \n  for j from 1 to 8 do \n    m[i,j] := i
+nt( int( int( f[i]*f[j], x=0..1), y=0..1), z=0..1);\n  od;\nod;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "print(m);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#-%'matrixG6#7*7*#\"\"\"\"#F#F)\"#aF+#F)\"$3\"F+F-F-#F
+)\"$;#7*F+F(F-F+F-F+F/F-7*F+F-F(F+F-F/F+F-7*F-F+F+F(F/F-F-F+7*F+F-F-F/
+F(F+F+F-7*F-F+F/F-F+F(F-F+7*F-F/F+F-F+F-F(F+7*F/F-F-F+F-F+F+F(" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 46 "this code generates a stiffness matrix ( grad " }
+{XPPEDIT 19 1 "phi;" "6#%$phiG" }{TEXT -1 7 ", grad " }{XPPEDIT 19 1 "
+psi;" "6#%$psiG" }{TEXT -1 2 ");" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 191 "for i from 1 to 8 do \n  fo
+r j from 1 to 8 do \n    m[i,j] := int( int( int( diff(f[i],x)*diff(f[
+j],x)+ diff(f[i],y)*diff(f[j],y)+diff(f[i],z)*diff(f[j],z), x=0..1), y
+=0..1), z=0..1);\n  od;\nod;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 9 "print(m);" }}{PARA 11 "" 1 "" {TEXT -1 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 130 "for i from 1 to 8 do \+
+\n  for j from 1 to 8 do \n    m[i,j] := int( int( int( f[i]*diff(f[j]
+,z), x=0..1), y=0..1), z=0..1);\n  od;\nod;" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "print
+(m);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'matrixG6#7*7*#!\"\"\"#=#F)
+\"#O#F)\"#sF+#\"\"\"F*#F0F,#F0F.F17*F+F(F+F-F1F/F1F27*F-F+F(F+F2F1F/F1
+7*F+F-F+F(F1F2F1F/F'F3F4F5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 16 "with(codegen,C);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#7#%\"CG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "19 0 0" 118 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

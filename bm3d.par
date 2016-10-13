@@ -1,0 +1,52 @@
+#### Parameters for the BM3D filter
+
+### Specify source file and ground truth (if available)
+sourcePath dome_512_25.tif
+groundTruthPath dome_512.png
+
+### Specify output directory
+outputDir "./"
+
+### Console output
+quietMode 0
+
+
+### BM3D Options
+
+## Noise type	( noiseType )
+# G = additive Gaussian white noise (AGWN)
+# P = Poisson noise
+# CMOS = Mixed scaled Poisson-Gaussian
+noiseType G
+
+
+## Noise parameters
+# G: 	Z = lambda + Normal ( 0, sigma )
+# P: 	Z = Poisson ( lambda )
+# CMOS: Z = alpha * Poisson ( lambda ) + Normal ( mu, sigma )
+#alpha 1
+sigma 25
+#mu 0
+
+
+## Parameters for noise analysis
+#levelSetNumPointsPerSample 32
+#levelSetNumSamples 100
+#levelSetOverSamplingFactor 10
+#cropBordersBeforeAnalysis 1
+
+
+## Similarity search method		( similaritySearchMethod )
+# l		= use local window
+# gl 	= search in entire image
+similaritySearchMethod l
+
+
+
+### BM3D parameters
+
+## Block size
+# Size of the blocks that are compared with each other
+# Larger blocks increase robustness of similarity measure against noise, but also the computational complexity
+# Must be a power of two (8, 16, etc.)
+blockSize 8

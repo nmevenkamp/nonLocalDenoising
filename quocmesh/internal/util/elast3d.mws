@@ -1,0 +1,146 @@
+{VERSION 5 0 "IBM INTEL LINUX" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Text Output" -1 2 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 2 6 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 0 0 0 2 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "W
+arning" 2 7 1 {CSTYLE "" -1 -1 "" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }
+0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "basis := array( 1..8
+ );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&basisG-%&arrayG6$;\"\"\"\"\"
+)7\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 30 "basis[1] := (1-x)*(1-y)*(1-z);" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#>&%&basisG6#\"\"\"*(,&F'F'%\"xG!\"\"F',&F'F'%\"
+yGF+F',&F'F'%\"zGF+F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "ba
+sis[2] := x*(1-y)*(1-z);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%&basisG
+6#\"\"#*(%\"xG\"\"\",&F*F*%\"yG!\"\"F*,&F*F*%\"zGF-F*" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "basis[3] := (1-x)*y*(1-z);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%&basisG6#\"\"$*(,&\"\"\"F*%\"xG!\"
+\"F*%\"yGF*,&F*F*%\"zGF,F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+22 "basis[4] := x*y*(1-z);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%&basi
+sG6#\"\"%*(%\"xG\"\"\"%\"yGF*,&F*F*%\"zG!\"\"F*" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 26 "basis[5] := (1-x)*(1-y)*z;" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>&%&basisG6#\"\"&*(,&\"\"\"F*%\"xG!\"\"F*,&F*F*%\"yGF
+,F*%\"zGF*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "basis[6] := x
+*(1-y)*z;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%&basisG6#\"\"'*(%\"xG
+\"\"\",&F*F*%\"yG!\"\"F*%\"zGF*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 22 "basis[7] := (1-x)*y*z;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%&
+basisG6#\"\"(*(,&\"\"\"F*%\"xG!\"\"F*%\"yGF*%\"zGF*" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 18 "basis[8] := x*y*z;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%&basisG6#\"\")*(%\"xG\"\"\"%\"yGF*%\"zGF*" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 600 "e := proc( basisfunc )\n  m
+at := array( 1..3, 1..3 );\n  mat[1,1] := diff( basisfunc[1], x );  \n
+  mat[2,2] := diff( basisfunc[2], y );\n  mat[3,3] := diff( basicfunc[
+3], z );\n  mat[1,2] := (diff( basisfunc[1], y )+diff( basisfunc[2], x
+ ))/2;  \n  mat[2,1] := (diff( basisfunc[1], y )+diff( basisfunc[2], x
+ ))/2;\n  mat[1,3] := (diff( basisfunc[1], z )+diff( basisfunc[3], x )
+)/2;\n  mat[3,1] := (diff( basisfunc[1], z )+diff( basisfunc[3], x ))/
+2;\n  mat[2,3] := (diff( basisfunc[2], z )+diff( basisfunc[3], y ))/2;
+\n  mat[3,2] := (diff( basisfunc[2], z )+diff( basisfunc[3], y ))/2;\n
+  return mat;\nend proc;\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 7 "" 1 "" {TEXT -1 61 "War
+ning, `mat` is implicitly declared local to procedure `e`\n" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#>%\"eGf*6#%*basisfuncG6#%$matG6\"F*C->8$-%&a
+rrayG6$;\"\"\"\"\"$F1>&F-6$F2F2-%%diffG6$&9$6#F2%\"xG>&F-6$\"\"#FA-F86
+$&F;6#FA%\"yG>&F-6$F3F3-F86$&%*basicfuncG6#F3%\"zG>&F-6$F2FA,&-F86$F:F
+F#F2FA*&FVF2-F86$FDF=F2F2>&F-6$FAF2FS>&F-6$F2F3,&-F86$F:FOFV*&FVF2-F86
+$&F;FNF=F2F2>&F-6$F3F2Fjn>&F-6$FAF3,&-F86$FDFOFV*&FVF2-F86$F`oFFF2F2>&
+F-6$F3FAFgoOF-F*F*F*" }}}{EXCHG {PARA 0 "" 0 "" {SPREADSHEET {NAME "Sp
+readSheet001" } {ROWHEIGHTS } {COLWIDTHS } {SSOPTS {CELLOPTS 2 10 4 2 
+1 255 255 255 }1 }485 257 257 }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 21 "vec := array( 1..3 );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$vecG
+-%&arrayG6$;\"\"\"\"\"$7\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+19 "vec[1] := basis[1];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%$vecG6#
+\"\"\"*(,&F'F'%\"xG!\"\"F',&F'F'%\"yGF+F',&F'F'%\"zGF+F'" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "vec[2] := 0;\nvec[3] := 0;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>&%$vecG6#\"\"#\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#>&%$vecG6#\"\"$\"\"!" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "e(v
+ec);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%$matG" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 17 "evalm( e(vec) ); " }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#-%'matrixG6#7%7%,$*&,&\"\"\"F+%\"yG!\"\"F+,&F+F+%\"zGF-
+F+F-,$*&,&F+F+%\"xGF-F+F.F+#F-\"\"#,$*&F2F+F*F+F47%F0\"\"!F97%F6F9F9" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 243 "matproduct := proc( mat1
+, mat2 )\n  return (mat1[1,1]*mat2[1,1] + mat1[2,1]*mat2[2,1] + mat1[1
+,2]*mat2[1,2] + mat1[2,2]*mat2[2,2]+ mat1[1,3]*mat2[1,3]+ mat1[3,1]*ma
+t2[3,1]+mat1[2,3]*mat2[2,3]+ mat1[3,3]*mat2[3,3]+mat1[3,2]*mat2[3,2]);
+\nend proc;" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%+matproductGf*6$%%mat
+1G%%mat2G6\"F)F)O,4*&&9$6$\"\"\"F0F0&9%F/F0F0*&&F.6$\"\"#F0F0&F2F5F0F0
+*&&F.6$F0F6F0&F2F:F0F0*&&F.6$F6F6F0&F2F>F0F0*&&F.6$F0\"\"$F0&F2FBF0F0*
+&&F.6$FCF0F0&F2FGF0F0*&&F.6$F6FCF0&F2FKF0F0*&&F.6$FCFCF0&F2FOF0F0*&&F.
+6$FCF6F0&F2FSF0F0F)F)F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "
+matproduct( e(vec), e(vec) );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*&)
+,&\"\"\"F'%\"yG!\"\"\"\"#F'),&F'F'%\"zGF)F*F'F'*(#F'F*F'),&F'F'%\"xGF)
+F*F'F+F'F'*(F/F'F0F'F%F'F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+35 "localmatrix := array( 1..8, 1..8 );" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%,localmatrixG-%&arrayG6%;\"\"\"\"\")F(7\"" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 22 "vec1 := array( 1..3 ):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 23 "vec2 := array( 1..3 ):\n" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+247 "for i from 1 to 8 do\n  for j from 1 to 8 do\n  vec1[1] := basis[
+i]:\n  vec1[2] := 0:\n  vec1[3] := 0:\n  vec2[1] := basis[j]:\n  vec2[
+2] := 0:\n  vec2[3] := 0:\n  localmatrix[i, j] := int(int( int( matpro
+duct( e(vec1), e(vec2) ), x=0..1),y=0..1),z=0..1);" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 9 "  end do;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end d
+o;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 148 "for i from 1 to 8 do\n  for j from 1 to 8 do
+\n  localmatrix[i, j] := int(int( int( diff( basis[i], x ) * diff( bas
+is[j], x ), x=0..1),y=0..1),z=0..1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 9 "  end do;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end do;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "evalm( localmatrix );" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'matrixG6#7*7*#\"\"\"\"\"*#!\"\"F*#F
+)\"#=#F,F.F-F/#F)\"#O#F,F17*F+F(F/F-F/F-F2F07*F-F/F(F+F0F2F-F/7*F/F-F+
+F(F2F0F/F-7*F-F/F0F2F(F+F-F/7*F/F-F2F0F+F(F/F-7*F0F2F-F/F-F/F(F+7*F2F0
+F/F-F/F-F+F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "int( int( d
+iff( x*y, x )*diff( x*y,x ) + 1/2*diff( x*y,y)*diff(x*y,y), x=0..1), y
+=0..1 );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##\"\"\"\"\"#" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "vec1[1] := basis[3];" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#>&%%vec1G6#\"\"\"*(,&F'F'%\"xG!\"\"F'%\"yGF',&F'F'%\"zGF+F'" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "vec2[1] := basis[3];" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%%vec2G6#\"\"\"*(,&F'F'%\"xG!\"\"F'%
+\"yGF',&F'F'%\"zGF+F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "ma
+tproduct( e(vec1), e(vec2) );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*&)
+,&\"\"\"F'%\"zG!\"\"\"\"#F')%\"yGF*F'F'*(#F'F*F'),&F'F'%\"xGF)F*F'F%F'
+F'*(F.F'F/F'F+F'F'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "evalm
+( e(vec1) );" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'matrixG6#7%7%,$*&%
+\"yG\"\"\",&F+F+%\"zG!\"\"F+F.,$*&,&F+F+%\"xGF.F+F,F+#F+\"\"#,$*&F1F+F
+*F+#F.F47%F/\"\"!F97%F5F9F9" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+615 "showmatrix_C := proc( mat ) \n  local i;\n  printf( \"double mat[
+8][8] = \{ \" );\n  for i from 1 to 8 do\n     printf( \"\{%d./%d., %d
+./%d., %d./%d., %d./%d., %d./%d., %d./%d., %d./%d., %d./%d.\}\", \n   \+
+    numer(mat[i,1]), denom(mat[i,1]),\n       numer(mat[i,2]), denom(m
+at[i,2]),\n       numer(mat[i,3]), denom(mat[i,3]),\n       numer(mat[
+i,4]), denom(mat[i,4]),\n       numer(mat[i,5]), denom(mat[i,5]),\n   \+
+    numer(mat[i,6]), denom(mat[i,6]),\n       numer(mat[i,7]), denom(m
+at[i,7]),\n       numer(mat[i,8]), denom(mat[i,8]) );\n     if i < 8 t
+hen \n       printf( \",\\n\" );\n     end if;\n  end do;\n  printf( \+
+\" \};\" );\nend proc;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+12 "" 1 "" {XPPMATH 20 "6#>%-showmatrix_CGf*6#%$matG6#%\"iG6\"F*C%-%'p
+rintfG6#Q6double~mat[8][8]~=~|fr~F*?(8$\"\"\"F2\"\")%%trueGC$-F-63Qco|
+fr%d./%d.,~%d./%d.,~%d./%d.,~%d./%d.,~%d./%d.,~%d./%d.,~%d./%d.,~%d./%
+d.|hrF*-%&numerG6#&9$6$F1F2-%&denomGF;-F:6#&F=6$F1\"\"#-F@FB-F:6#&F=6$
+F1\"\"$-F@FH-F:6#&F=6$F1\"\"%-F@FN-F:6#&F=6$F1\"\"&-F@FT-F:6#&F=6$F1\"
+\"'-F@FZ-F:6#&F=6$F1\"\"(-F@Fjn-F:6#&F=6$F1F3-F@F`o@$2F1F3-F-6#Q#,|+F*
+-F-6#Q$~|hr;F*F*F*F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "showmatrix_C( localmatrix )
+;" }}{PARA 6 "" 1 "" {TEXT -1 88 "double mat[8][8] = \{ \{1./9., -1./9
+., 1./18., -1./18., 1./18., -1./18., 1./36., -1./36.\}," }}{PARA 6 "" 
+1 "" {TEXT -1 67 "\{-1./9., 1./9., -1./18., 1./18., -1./18., 1./18., -
+1./36., 1./36.\}," }}{PARA 6 "" 1 "" {TEXT -1 67 "\{1./18., -1./18., 1
+./9., -1./9., 1./36., -1./36., 1./18., -1./18.\}," }}{PARA 6 "" 1 "" 
+{TEXT -1 67 "\{-1./18., 1./18., -1./9., 1./9., -1./36., 1./36., -1./18
+., 1./18.\}," }}{PARA 6 "" 1 "" {TEXT -1 67 "\{1./18., -1./18., 1./36.
+, -1./36., 1./9., -1./9., 1./18., -1./18.\}," }}{PARA 6 "" 1 "" {TEXT 
+-1 67 "\{-1./18., 1./18., -1./36., 1./36., -1./9., 1./9., -1./18., 1./
+18.\}," }}{PARA 6 "" 1 "" {TEXT -1 67 "\{1./36., -1./36., 1./18., -1./
+18., 1./18., -1./18., 1./9., -1./9.\}," }}{PARA 6 "" 1 "" {TEXT -1 69 
+"\{-1./36., 1./36., -1./18., 1./18., -1./18., 1./18., -1./9., 1./9.\} \+
+\};" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "37 0 0" 
+0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

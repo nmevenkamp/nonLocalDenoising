@@ -1,0 +1,15 @@
+SET ( SELECTED_MODULES
+	modules/aol 
+    modules/quoc
+    modules/imgproc
+    internal/modules/imgproc
+)
+
+# projects that have their own CMakeLists.txt.
+SET ( SELECTED_PROJECTS )
+
+# projects that use CMakeLists.project.txt.
+SET ( SELECTED_STDPROJECTS
+	internal/projects/mevenkamp
+	tools/image/converter
+)

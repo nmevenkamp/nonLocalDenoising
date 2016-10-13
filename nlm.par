@@ -1,0 +1,66 @@
+#### Parameters for the Non-local Means filter
+
+### Specify source file and ground truth (if available)
+sourcePath dome_512_25.tif
+groundTruthPath dome_512.png
+
+### Specify output directory
+outputDir "./"
+
+### Console output
+quietMode 0
+
+
+### Non-local Means Options
+
+## Noise type	( noiseType )
+# G = additive Gaussian white noise (AGWN)
+# P = Poisson noise
+# CMOS = Mixed scaled Poisson-Gaussian
+noiseType G
+
+
+## Noise parameters
+# G: 	Z = lambda + Normal ( 0, sigma )
+# P: 	Z = Poisson ( lambda )
+# CMOS: Z = alpha * Poisson ( lambda ) + Normal ( mu, sigma )
+#alpha 1
+sigma 25
+#mu 0
+
+
+## Parameters for noise analysis
+#levelSetNumPointsPerSample 32
+#levelSetNumSamples 100
+#levelSetOverSamplingFactor 10
+#cropBordersBeforeAnalysis 1
+
+
+## Similarity search method		( similaritySearchMethod )
+# l		= use local N2 x N2 window
+# gl 	= search in entire image
+similaritySearchMethod l
+
+
+### Non-local means parameters
+# If any of the following parameters is set to zero,
+# it will be automatically set depending on the noise standard deviation in case of Gaussian noise
+# or a reasonable default value in case of Poisson noise
+# Exception: The filter parameter has to be manually set for Poisson noise when	NOT using the Anscombe transform
+
+## Filter parameter
+# Determines the amount of noise that is removed
+# Thus should increase with noise standard deviation in the case of Gaussian noise
+filterParameter 0
+
+## Block size
+# Size of the neighborhoods that are compared with each other
+# Larger neighborhoods increase robustness of similarity measure against noise, but also the computational complexity
+# Choose somewhere between 5 to 11, depending on the noise level
+#blockSize 11
+
+## Search window size
+# Size of the local search window used to find other blocks that are similar to a reference block
+# Enlarging may significantly increase the quality of the resulting estimate, but also the computational complexity
+# Choose somewhere between 21 to 35, depending on the image structure
+#searchWindowSize 35

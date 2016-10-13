@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+$in  = @ARGV[0];
+$out = @ARGV[1];
+
+if($in =~ /--help/ || $in =~ /-h/ ) {
+  print"Usage: ascii2string infile outfile\n";
+  print"Converts an ASCII file into a file containing a C string\n";
+  print"that can be inserted into C/C++ source code\n";
+  die("\n");
+}
+
+if($out){
+  #Open output-file:
+  if(-e $out){
+    print "Overwrite existing file $out ? ";
+    if(<STDIN> =~ /^[^yY]/) { die("\n") };
+  }
+  open(OUT, ">$out");
+} else {
+  #Print to STDOUT:
+  #OUT = STDOUT;
+  print"Usage: ascii2string infile outfile\n";
+}
+
+open(DATEI, "$in") || die("Error opening file $in");
+while( $line = <DATEI>) {
+	chomp( $line );
+	print OUT "\"".$line."\\n\"\n";
+}

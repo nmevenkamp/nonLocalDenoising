@@ -1,0 +1,52 @@
+#### Parameters for local filters
+
+### Specify source file and ground truth (if available)
+sourcePath dome_512_25.tif
+groundTruthPath dome_512.png
+
+### Specify output directory
+outputDir "./"
+
+### Console output
+quietMode 0
+
+
+## Filter type
+# 0 = moving averages
+# 1 = bilateral filter
+filterType 0
+
+
+## Noise type	( noiseType )
+# G = additive Gaussian white noise (AGWN)
+# P = Poisson noise
+# CMOS = Mixed scaled Poisson-Gaussian
+noiseType G
+
+
+## Noise parameters
+# G: 	Z = lambda + Normal ( 0, sigma )
+# P: 	Z = Poisson ( lambda )
+# CMOS: Z = alpha * Poisson ( lambda ) + Normal ( mu, sigma )
+#alpha 1
+sigma 25
+#mu 0
+
+
+## Parameters for noise analysis
+#levelSetNumPointsPerSample 32
+#levelSetNumSamples 100
+#levelSetOverSamplingFactor 10
+#cropBordersBeforeAnalysis 1
+
+
+## Block size
+# Size of the filter kernel
+blockSize 7
+
+
+### Bilateral filter options
+# If any of the following parameters is set to zero,
+# it will be automatically set depending on the noise standard deviation
+sigmaPosition 0
+sigmaIntensity 0
