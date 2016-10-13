@@ -15,9 +15,9 @@ In order to RUN the denoising executables, follow these steps:
 
 1) (Optional) adjust the parameter files (nlm.par, bm3d.par, localFilter.par)
 
-2) Execute quocGCC/internal/projects/mevenkamp/<Filter> <pathToParameterFile>
+2) Execute quocGCC/internal/projects/mevenkamp/\<Filter> \<pathToParameterFile>
 
-   where <Filter> can be either "NLM", "BM3D" or "LocalFilter" (without the "")
+   where \<Filter> can be either "NLM", "BM3D" or "LocalFilter" (without the "")
    
 
 The results will be stored in a new folder inside the output directory (which is specified in the parameter file).
@@ -25,6 +25,6 @@ The name of the new folder is a combination of the base name of the input file, 
 
 Results are stored in the QuocMesh double binary image format (.q2bz). This format can be converted to other float precision formats using
 
-1) quocGCC/tools/image/converter/convertQuocToCIMG <pathTo.q2bzFile>      (CIMG) 
+1) quocGCC/tools/image/converter/convertQuocToCIMG \<pathTo.q2bzFile>      (CIMG) 
 
-2) quocGCC/tools/image/converter/convertQuocToMAT <pathTo.q2bzFile>       (MATLAB)
+2) quocGCC/tools/image/converter/convertQuocToMAT \<pathTo.q2bzFile>       (MATLAB)
