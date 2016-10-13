@@ -19,5 +19,5 @@ The name of the new folder is a combination of the base name of the input file, 
 
 Results are stored in the QuocMesh double binary image format (.q2bz). This format can be converted to other float precision formats using
 
-1) quocGCC/tools/image/converter/convertQuocToCIMG <pathTo.q2bzFile>      (CIMG)
+1) quocGCC/tools/image/converter/convertQuocToCIMG <pathTo.q2bzFile>      (CIMG) 
 2) quocGCC/tools/image/converter/convertQuocToMAT <pathTo.q2bzFile>       (MATLAB)
