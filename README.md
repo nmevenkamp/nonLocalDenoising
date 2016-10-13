@@ -17,5 +17,7 @@ In order to RUN the denoising executables, follow these steps:
 The results will be stored in a new folder inside the output directory (which is specified in the parameter file).
 The name of the new folder is a combination of the base name of the input file, the filter name and its parameters.
 
-Results are stored in the QuocMesh double binary image format (.q2bz) and can be converted to floating precision TIFF images using
-    quocGCC/tools/image/converter/convertQuocToTIFF <pathToQ2bzFile>
+Results are stored in the QuocMesh double binary image format (.q2bz). This format can be converted to other float precision formats using
+
+1) quocGCC/tools/image/converter/convertQuocToCIMG <pathTo.q2bzFile>      (CIMG)
+2) quocGCC/tools/image/converter/convertQuocToMAT <pathTo.q2bzFile>       (MATLAB)
